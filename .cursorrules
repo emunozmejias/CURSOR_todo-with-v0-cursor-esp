@@ -1,0 +1,93 @@
+# Reglas de Cursor para Todo List App
+
+
+## Para este proyecto, usaremos el siguiente contenido para el archivo .cursorrules:
+Eres experto en TypeScript, Next.js App Router, React y Tailwind. Sigue la documentación de @Next.js 14 App Router para la obtención, renderización y enrutamiento de datos. Usa el SDK de IA de Vercel para gestionar las interacciones de IA y la transmisión de respuestas.
+
+- app contiene los archivos page.tsx y layout.tsx.
+- app/api contiene las rutas de la API.
+- app/components contiene todos los componentes de React.
+- app/lib contiene el resto del código, como ayudantes, ganchos y contextos.
+
+## Información del Proyecto
+Este es un proyecto de lista de tareas (Todo List) construido con:
+- **Next.js 16** con App Router
+- **React 19**
+- **TypeScript 5**
+- **Tailwind CSS v4**
+- **shadcn/ui** (componentes basados en Radix UI)
+- **Lucide React** para iconos
+
+## Idioma
+- La interfaz de usuario está en **español**
+- Los comentarios en el código pueden estar en español o inglés
+- Los nombres de variables y funciones deben estar en **inglés**
+
+## Convenciones de Código
+
+### TypeScript
+- Usar tipos explícitos para props de componentes
+- Preferir `interface` sobre `type` para objetos
+- Usar `type` para imports de tipos: `import type { X } from "y"`
+
+### React y Next.js
+- Usar `"use client"` solo cuando sea necesario (hooks, eventos del navegador)
+- Preferir Server Components por defecto
+- Usar el App Router de Next.js (`app/` directory)
+- Los componentes deben exportarse como funciones nombradas: `export function ComponentName()`
+
+### Estilos
+- Usar Tailwind CSS para todos los estilos
+- Usar las variables CSS de tema: `bg-background`, `text-foreground`, `text-muted-foreground`, etc.
+- Usar el helper `cn()` de `@/lib/utils` para combinar clases condicionales
+- Seguir el sistema de diseño establecido con los colores de acento
+
+### Componentes UI
+- Los componentes de UI base están en `@/components/ui/`
+- Usar los componentes de shadcn/ui existentes (Button, Input, Card, Checkbox, etc.)
+- Importar desde `@/components/ui/[componente]`
+- Usar iconos de `lucide-react`
+
+### Estructura de Archivos
+```
+app/           → Páginas y layouts (App Router)
+components/    → Componentes React
+  ui/          → Componentes base de shadcn/ui
+lib/           → Utilidades y helpers
+public/        → Assets estáticos
+```
+
+### Imports
+- Usar alias `@/` para imports absolutos desde la raíz del proyecto
+- Ordenar imports:
+  1. React y Next.js
+  2. Librerías externas
+  3. Componentes locales
+  4. Utilidades y tipos
+
+## Buenas Prácticas
+
+### Estado y Datos
+- Preferir `useState` para estado local simple
+- Usar nombres descriptivos para estados: `const [isLoading, setIsLoading] = useState(false)`
+
+### Accesibilidad
+- Incluir atributos ARIA cuando sea necesario
+- Asegurar que los elementos interactivos sean accesibles por teclado
+- Usar componentes de Radix UI que ya incluyen accesibilidad
+
+### Rendimiento
+- Evitar re-renders innecesarios
+- Usar `key` prop correctamente en listas
+
+## Comandos del Proyecto
+- `npm run dev` - Iniciar servidor de desarrollo
+- `npm run build` - Construir para producción
+- `npm run start` - Iniciar servidor de producción
+- `npm run lint` - Ejecutar ESLint
+
+## Notas Adicionales
+- Este proyecto usa Tailwind CSS v4 con la nueva sintaxis de configuración
+- Los componentes de shadcn/ui están personalizados con el tema del proyecto
+- Mantener consistencia con el estilo visual existente
+
